@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<div class="row">
+    <div class="col col-md-8 offset-md-2">
+
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <header>
+                <h1 itemprop="name headline">{{ page.title }}</h1>
+                <p>
+                    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                        <span class="badge-date">{{ page.date | date: "%e %B %Y" }}</span>
+                    </time>
+                    {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
+                            itemprop="name">{{ page.author }}</span></span>{% endif %}
+                    {% if page.categories.size != 0 %}
+                    {% for item in page.categories %}
+                    <span class="badge badge-success">{{ item }}</span>
+                    {% endfor %}
+                    {% endif %}
+                </p>
+            </header>
+
+            <div class="article-body" itemprop="articleBody">
+                {{ content }}
+
+            </div>
+
+            <div class="sharing">
+                <div><strong>Spead the love!</strong></div>
+                Did you enjoy reading this essay? Share it on
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://ayushsharma.in{{ page.url | prepend: site.url  }}/"
+                    target="_blank" title="Share this on LinkedIn!">LinkedIn</a> |
+                <a href="http://twitter.com/intent/tweet?text={{ page.title | url_encode }}:%20https://ayushsharma.in{{ page.url | prepend: site.url }}"
+                    target="_blank" title="Share this on Twitter!">Twitter</a> |
+                <a href="http://www.facebook.com/sharer/sharer.php?u=https://ayushsharma.in{{ page.url | prepend: site.url  }}"
+                    target="_blank" title="Share this on Facebook!">Facebook</a>
+            </div>
+
+            <div class="sharing">
+                <strong>My recent writing...</strong>
+                <ul>
+                    {% for post in site.related_posts limit: 5 %}
+                    <li><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+        </article>
+
+
+    </div>
+</div>
+</div>

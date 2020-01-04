@@ -1,0 +1,47 @@
+# Jekyll Configuration
+
+# Site Settings
+url: "https://notes.ayushsharma.in"
+website_url: "https://notes.ayushsharma.in/"
+title: ayush sharma's notes ☕ + 🎧 + 🕹️
+email: ayush@ayushsharma.in
+images-path: /static/images/
+videos-path: /static/videos/
+js-path: /static/js/
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Post Settings
+permalink: /:year/:month/:title
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: bash
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+# Sass settings
+sass:
+    style: :compressed
+
+# Collections
+collections:
+    collection_nav_links:
+      output: false
+    collection_projects:
+      output: false
+    collection_social:
+      output: false
+
+
+# Plugins
+plugins:
+  - jekyll-minifier

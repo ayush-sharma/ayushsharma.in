@@ -1,0 +1,98 @@
+// Main
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-family-serif;
+  }
+}
+
+// Header
+nav a {
+  color: $body-color;
+}
+
+// Articles
+article.post {
+  p {
+    @extend .my-4;
+    line-height: $line-height-lg;
+  }
+
+  h2 {
+    @extend .my-4, .p-4;
+    @extend .alert-light;
+    border-left: 4px solid $success;
+    border-top: 4px solid $success;
+  }
+
+  h3 {
+    @extend .my-4, .px-4;
+    @extend .alert-light;
+    border-left: 2px solid $success;
+  }
+
+  h4 {
+    @extend .my-4, .px-4;
+    @extend .alert-light;
+    border-left: 1px solid $success;
+  }
+
+  img {
+    @extend .img-fluid;
+    @extend .rounded;
+    -webkit-box-shadow: 0 0.1rem 0.1rem $gray-500;
+    -moz-box-shadow: 0 0.1rem 0.1rem $gray-500;
+    box-shadow: 0 0.1rem 0.1rem $gray-500;
+  }
+
+  ol,
+  ul {
+    @extend .p-0;
+    @extend .mb-0;
+    list-style-type: none;
+  }
+
+  ol li {
+    counter-increment: item;
+    &:before {
+      content: counter(item) ". ";
+    }
+  }
+
+  ul li {
+    &:before {
+      content: "\2794";
+      color: $text-muted;
+      padding-right: $caret-width;
+    }
+  }
+
+  blockquote {
+    @extend .my-4, .px-2;
+    @extend .alert-light;
+    @extend .small;
+    border-left: 2px solid $info;
+  }
+
+  code,
+  pre {
+    @extend .mb-0;
+  }
+
+  .sharing {
+    @extend .my-4, .py-2, .px-4;
+    @extend .alert-light;
+    border-left: 2px solid $success;
+  }
+}
+
+.badge-date {
+  @extend .badge;
+  @extend .badge-light;
+  @extend .text-muted;
+  @extend .ml-1;
+}

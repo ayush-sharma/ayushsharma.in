@@ -1,0 +1,56 @@
+[Settings]
+ID = "Your_Site_ID"
+
+# Settings in the [build] context are global and are applied to all contexts unless otherwise overridden by more specific contexts.  
+
+[build]
+  # This is the directory to change to before starting a build.
+  base    = ""
+  # NOTE: This is where we will look for package.json/.nvmrc/etc, not root.
+  # This is the directory that you are publishing from (relative to root of your repo)
+  publish = ""
+  # This will be your default build command
+  command = "JEKYLL_ENV=production jekyll build --verbose --source . --config _config.yml --destination _site"
+
+[context.production]
+  publish = "_site"
+  command = "JEKYLL_ENV=production jekyll build --verbose --source . --config _config.yml --destination _site"
+
+[context.develop]
+  publish = "_site_develop"
+  command = "JEKYLL_ENV=production jekyll build --verbose --source . --config _config.yml,_config-develop.yml --destination _site_develop"
+
+# A basic redirects rule
+[[redirects]]
+  from = "https://www.ayushsharma.in/*"
+  to = "https://notes.ayushsharma.in/:splat"
+  status = 301
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+
+[[redirects]]
+  from = "https://ayushsharma.in/*"
+  to = "https://notes.ayushsharma.in/:splat"
+  status = 301
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+
+[[redirects]]
+  from = "https://notesayushsharma.netlify.com/*"
+  to = "https://notes.ayushsharma.in/:splat"
+  status = 301
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' ; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data:; child-src 'self';  font-src 'self' https://fonts.gstatic.com; media-src 'self'"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=604800; includeSubdomains; "
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin"

@@ -1,0 +1,21 @@
+<div class="container">
+	<nav class="navbar navbar-expand-lg">
+		<a href="/" class="navbar-brand main-link" title="Ayush Sharma's personal notes">
+			ayush sharma's notes<span class="ml-2 d-none d-sm-inline-flex"><span class="mr-1" title="tea">☕</span>+<span class="mr-1 ml-1" title="music">🎧</span>+<span class="ml-1" title="video games">🕹️</span></span>
+		</a>
+		<button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#my-navbar-toggler" aria-controls="my-navbar-toggler" aria-expanded="false" aria-label="Navigation menu">
+			<span class="navbar-toggler-icon text-secondary"><i class="fas fa-bars"></i></span>
+		</button>
+		<div class="collapse navbar-collapse" id="my-navbar-toggler">
+			<ul class="navbar-nav ml-auto">
+
+				{% assign sorted_nav = site.collection_nav_links | sort: 'sort_order' %}
+				{% for nav in sorted_nav %}
+				<li class="nav-item">
+					<a class="nav-link {{ nav.href_class }}" href="{{ nav.href }}" title="{{ nav.title }}"><i class="{{ nav.icon_class }} ml-2 mr-1"></i>{{ nav.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</nav>
+</div>
