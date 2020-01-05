@@ -19,37 +19,6 @@ permalink: /about/
 	</div>
 </div>
 
-## <i class="far fa-toolbox mr-2"></i>Toolbox
-- <span class="text-muted">Front-end Development:</span> HTML5, CSS3, Javascript, Bootstrap, JQuery, AJAX
-- <span class="text-muted">Backend Development:</span> PHP, Python, Lua, Bash, Laravel, Jekyll, Boto3
-- <span class="text-muted">Servers & Orchestration:</span> Nginx, Ansible, Packer, Terraform, Vagrant
-- <span class="text-muted">Databases:</span> MySQL, SQLite, BigQuery, Aerospike, InfluxDB
-- <span class="text-muted">Cloud Platforms:</span> AWS, Google Cloud, DigitalOcean, CloudFlare, Netlify
-- <span class="text-muted">Monitoring & Logging:</span> Zabbix, Dynatrace, Collectd, Fluentd, Grafana, Papertrail
-- <span class="text-muted">Source Control:</span> Git, Bitbucket Pipelines, GitHub
-- <span class="text-muted">APIs:</span> Google APIs, PayTM, CashFree, ChartJS, MSG91
-- <span class="text-muted">Virtualisation:</span> Docker, VMWare, VirtualBox
-- <span class="text-muted">Operating Systems:</span> Ubuntu, Debian, Mac OS X, Windows
-
-## <i class="far fa-history mr-2"></i>Work Experience
-- <span class="text-muted">Chief Technology Officer</span> - ThinkCurve Technologies (October 2017 - October 2018)
-- <span class="text-muted">Senior Software Engineer</span> - Vdopia, Inc. (February 2016 – October 2017)
-- <span class="text-muted">Lead Web Developer</span> - LoudCell Technologies (July 2010 – October 2015)
-- <span class="text-muted">Freelancer Web Developer</span> - (July 2009 – May 2010)
-
-## <i class="far fa-rocket mr-2"></i>Projects
-
-<ul>
-
-{% assign sorted_projects = site.collection_projects | sort: 'sort_order' %}
-{% for project in sorted_projects %}
-
-<li><a href="{{ project.href }}" target="_blank">{{ project.title }}</a>: {{ project.desc }}</li>
-
-{% endfor %}
-
-</ul>
-
 ## <i class="far fa-envelope-open mr-2"></i>Contact
 
 My email address is: **ayush`[at-the-rate]`ayushsharma.in**.
