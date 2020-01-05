@@ -27,12 +27,12 @@ permalink: /notes/
 				{% if year != post_year %}
 					{% continue %}
 				{% endif %}
-				<div class="row mt-3 mb-3">
+				<div class="row mt-1 mb-1">
 					<div class="col-12">
-						<h3>
+						<p>
 							<a href="{{ post.url }}">{{ post.title }}</a>
 							<span class="badge-date">{{ post.date | date: '%e %b' }}</span>
-						</h3>
+						</p>
 					</div>
 				</div>
 			{% endfor %}
