@@ -24,21 +24,18 @@ article.post {
 
   h2 {
     @extend .my-4, .p-4;
-    @extend .alert-light;
-    border-left: 4px solid $success;
-    border-top: 4px solid $success;
+    border-left: 4px solid $sunrise;
+    border-top: 4px solid $sunrise;
   }
 
   h3 {
     @extend .my-4, .px-4;
-    @extend .alert-light;
-    border-left: 2px solid $success;
+    border-left: 8px solid $sunrise;
   }
 
   h4 {
     @extend .my-4, .px-4;
-    @extend .alert-light;
-    border-left: 1px solid $success;
+    border-left: 4px solid $sunrise;
   }
 
   img {
@@ -78,9 +75,26 @@ article.post {
     border-left: 2px solid $info;
   }
 
-  code,
+  code {
+    padding: $kbd-padding-y $kbd-padding-x;
+    font-size: $kbd-font-size;
+    color: $kbd-color;
+    background-color: $kbd-bg;
+    @include border-radius($border-radius-sm);
+    @include box-shadow($kbd-box-shadow);
+  }
+
   pre {
-    @extend .mb-0;
+    @extend .p-4;
+    font-size: $font-size-base;
+    color: $kbd-color;
+    background-color: $kbd-bg;
+    @include border-radius($border-radius-sm);
+    @include box-shadow($kbd-box-shadow);
+
+    code {
+      padding:0;
+    }
   }
 
   .sharing {
@@ -98,6 +112,5 @@ article.post {
 }
 
 footer {
-
   background: $footer-bg;
 }
