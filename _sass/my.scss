@@ -96,3 +96,8 @@ article.post {
   @extend .text-muted;
   @extend .ml-1;
 }
+
+footer {
+
+  background: $footer-bg;
+}
