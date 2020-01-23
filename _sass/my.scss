@@ -104,13 +104,6 @@ article.post {
   }
 }
 
-.badge-date {
-  @extend .badge;
-  @extend .badge-light;
-  @extend .text-muted;
-  @extend .ml-1;
-}
-
 footer {
   background: $footer-bg;
 }
