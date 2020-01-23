@@ -9,7 +9,7 @@ permalink: /projects/
 {% assign sorted_projects = site.collection_projects | sort: 'sort_order' %}
 {% for project in sorted_projects %}
 
-    <div class="card">
+    <div class="card bg-primary">
         <div class="card-body">
             <h2 class="card-title"><img class="mr-2 align-middle" src="{{ project.icon | prepend: site.images-path | prepend: site.baseurl | prepend: site.url }}" alt="{{ project.title}}" height="28" />{{ project.title }}</h2>
             <p class="card-text">{{ project.desc }}</p>
