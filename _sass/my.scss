@@ -18,7 +18,7 @@ nav a {
 // Articles
 article.post {
   a {
-    border-bottom: 2px solid $sunrise;
+    border-bottom: 2px solid $link-color;
     
     &:hover {
       text-decoration: none;
@@ -32,12 +32,12 @@ article.post {
 
   h2 {
     @extend .my-2, .p-2;
-    border-bottom: 8px solid $blue-topaz;
+    border-bottom: 8px solid $border-color;
   }
 
   h3 {
     @extend .my-4, .px-4;
-    border-left: 8px solid $blue-topaz;
+    border-left: 8px solid $border-color;
   }
 
   img {
@@ -65,7 +65,7 @@ article.post {
   ul li {
     &:before {
       content: "\2794";
-      color: $blue-topaz;
+      color: $border-color;
       padding-right: $caret-width;
     }
   }
