@@ -6,7 +6,7 @@ permalink: /
 
     <div class="col">
         <p class="display-3 text-center">Hi, my name is Ayush Sharma</p>
-        <p class="lead text-center">I write about technology, build software to solve problems, and help people speak Cloud.</p>
+        <p class="lead text-center">I am a software architect, technical blogger, and fiction writer. I help companies speak Cloud.</p>
     </div>
 
 </div>

@@ -17,28 +17,27 @@ nav a {
 
 // Articles
 article.post {
+  a {
+    border-bottom: 2px solid $link-color;
+    
+    &:hover {
+      text-decoration: none;
+      border-bottom: 2px solid $link-hover-color;
+    }
+  }
   p {
     @extend .my-4;
     line-height: $line-height-lg;
   }
 
   h2 {
-    @extend .my-4, .p-4;
-    @extend .alert-light;
-    border-left: 4px solid $success;
-    border-top: 4px solid $success;
+    @extend .my-2, .p-2;
+    border-bottom: 8px solid $border-color;
   }
 
   h3 {
     @extend .my-4, .px-4;
-    @extend .alert-light;
-    border-left: 2px solid $success;
-  }
-
-  h4 {
-    @extend .my-4, .px-4;
-    @extend .alert-light;
-    border-left: 1px solid $success;
+    border-left: 8px solid $border-color;
   }
 
   img {
@@ -66,33 +65,44 @@ article.post {
   ul li {
     &:before {
       content: "\2794";
-      color: $text-muted;
+      color: $border-color;
       padding-right: $caret-width;
     }
   }
 
   blockquote {
-    @extend .my-4, .px-2;
-    @extend .alert-light;
-    @extend .small;
-    border-left: 2px solid $info;
+    @extend .my-1, .py-1, .px-4;
+    border-left: 4px solid $border-color;
   }
 
-  code,
+  code {
+    padding: $kbd-padding-y $kbd-padding-x;
+    font-size: $kbd-font-size;
+    color: $kbd-color;
+    background-color: $kbd-bg;
+    @include border-radius($border-radius-sm);
+    @include box-shadow($kbd-box-shadow);
+  }
+
   pre {
-    @extend .mb-0;
+    @extend .p-4;
+    font-size: $font-size-base;
+    color: $kbd-color;
+    background-color: $kbd-bg;
+    @include border-radius($border-radius-sm);
+    @include box-shadow($kbd-box-shadow);
+
+    code {
+      padding:0;
+    }
   }
 
   .sharing {
     @extend .my-4, .py-2, .px-4;
-    @extend .alert-light;
-    border-left: 2px solid $success;
+    background: $success;
   }
 }
 
-.badge-date {
-  @extend .badge;
-  @extend .badge-light;
-  @extend .text-muted;
-  @extend .ml-1;
+footer {
+  background: $footer-bg;
 }

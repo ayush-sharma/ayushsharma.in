@@ -7,11 +7,19 @@ permalink: /about/
 <div class="row">
 	<div class="col col-md-9">
 		<p>
-			I was eleven years old when Yahoo first introduced email in India. I remember creating my account, sending emails to everyone I knew, and I was fascinated by how easy communication had become. My love affair with computers had begun.
+			Ayush Sharma is a software architect, technical blogger, and fiction writer.
 		</p>
-
 		<p>
-			Over the next few years I became as deeply involved in the field as I could. I joined my high school’s computer competition team, then experimented with programming and web technologies, and later architected and deployed several enterprise-class applications with a team of awesome professionals. All of this opened new doors for me when it came to not only what I worked on, but how I worked on it. I've learnt a lot along the way, and I'm happy to say the journey is not yet over.
+			He has been a software professional for over a decade, working with startups and large enterprises on cloud innovations, and writes about his experiences online on his blog.
+		</p>
+		<p>
+			Attracted to writing fiction at an early age, he composed a science fiction novella and several short stories. He now devotes more time toward cultivating his writing skills.
+		</p>
+		<p>
+			He lives with his family in New Delhi, India.
+		</p>
+		<p>
+			His blog can be found at <a href="/">https://ayushsharma.in</a>.
 		</p>
 	</div>
 	<div class="col col-md-3">
@@ -21,7 +29,7 @@ permalink: /about/
 
 ## <i class="far fa-envelope-open mr-2"></i>Contact
 
-My email address is: **ayush`[at-the-rate]`ayushsharma.in**.
+My email address is: **ayush[at-the-rate]ayushsharma.in**.
 
 I can also be be found on:
 

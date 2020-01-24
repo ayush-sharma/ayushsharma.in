@@ -3,43 +3,89 @@
 <script src="{{ site.js-path | prepend: site.baseurl | prepend: site.url }}bootstrap-popper.js" defer></script>
 <script src="{{ site.js-path | prepend: site.baseurl | prepend: site.url }}bootstrap-4.1.1.js" defer></script>
 
-<div class="container-fluid">
-    <div class="row mt-4">
-        <div class="col m-0">
-            <hr class="mt-0" />
-        </div>
-    </div>
-</div>
+<footer class="container-fluid mt-4 p-4">
+    <footer class="container">
+        <div class="row">
+            <div class="col-6 text-left">
+                {% assign sorted_nav = site.collection_nav_links | sort: 'sort_order' %}
+                {% for nav in sorted_nav %}
 
-<footer class="container mt-4">
-    <div class="row">
-        <div class="col text-center">
-            {% assign sorted_nav = site.collection_nav_links | sort: 'sort_order' %}
-            {% for nav in sorted_nav %}
-            
-                <a class="{{ nav.href_class }} mr-4" href="{{ nav.href }}" title="{{ nav.title }}"><i class="{{ nav.icon_class }} mr-1"></i>{{ nav.title }}</a>
-            
-            {% endfor %}
+                <a class="{{ nav.href_class }} mr-4" href="{{ nav.href }}" title="{{ nav.title }}"><i
+                        class="{{ nav.icon_class }} mr-1"></i>{{ nav.title }}</a>
+
+                {% endfor %}
+            </div>
+            <div class="col-6 text-right">
+                {% assign sorted_links = site.collection_social | sort: 'sort_order' %}
+                {% for nav in sorted_links %}
+
+                <a class="{{ nav.href_class }} mr-2" href="{{ nav.href }}" title="{{ nav.title }}" target="_blank"><img
+                        src="{{ nav.icon | prepend: site.images-path | prepend: site.baseurl | prepend: site.url }}"
+                        width="35" height="35" alt="Ayush Sharma on {{ nav.title }}" /></a>
+
+                {% endfor %}
+            </div>
         </div>
-    </div>
-    <div class="row mt-4 mb-4">
-        <div class="col-12 col-md-4 text-center my-2">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" title="Creative Commons Attribution-ShareAlike 4.0"><img class="mr-2" alt="Creative Commons Attribution-ShareAlike 4.0" title="Creative Commons Attribution-ShareAlike 4.0" style="border-width:0" src="{{ site.images-path | prepend: site.baseurl | prepend: site.url }}creative-commons.png" width="88" height="31" />
-            </a>
+        <hr />
+        <div class="row">
+            <div class="col-6">
+                <p class="lead">
+                    My recent work
+                </p>
+                <p>
+                    {% for post in site.posts %}
+                        {% if forloop.index > 5 %}
+                        {% break %}
+                        {% endif %}
+                        <p>
+                            <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"
+                                title="{{ post.title }}">{{ post.title }}</a>
+                        </p>
+                        {% endfor %}
+                </p>
+            </div>
+            <div class="col-6">
+                <p class="lead">
+                    About me
+                </p>
+                <p>
+                    <div class="media">
+                        <img class="mr-3 rounded" src="{{ site.images-path | prepend: site.baseurl | prepend: site.url }}ayush-sharma.jpg" width="140" height="109" alt="Ayush Sharma">
+                        <div class="media-body">
+                          <p>
+                            My name is Ayush Sharma.
+                          </p>
+                          <p>
+                            I am a software architect, technical blogger, and fiction writer based in New Delhi, India.
+                          </p>
+                          <p>
+                            I work with startups and enterprises for strategic cloud adoption across the organization.
+                          </p>
+                        </div>
+                      </div>
+                </p>
+            </div>
         </div>
-        <div class="col-12 col-md-4 text-center my-2">
-            <a href="https://github.com/ayush-sharma/ayushsharma.in" target="_blank">Built</a> with <img src="{{ site.images-path | prepend: site.baseurl | prepend: site.url }}love.svg" width="35" height="35" alt="love" title="love" /> using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
+        <hr />
+        <div class="row">
+            <div class="col-4 text-left">
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                    title="Creative Commons Attribution-ShareAlike 4.0"><img class="mr-2"
+                        alt="Creative Commons Attribution-ShareAlike 4.0"
+                        title="Creative Commons Attribution-ShareAlike 4.0" style="border-width:0"
+                        src="{{ site.images-path | prepend: site.baseurl | prepend: site.url }}creative-commons.png"
+                        width="88" height="31" />CC BY-SA 4.0
+                </a>
+            </div>
+            <div class="col-4 text-center">
+                <a href="https://github.com/ayush-sharma/ayushsharma.in" target="_blank">Built</a> with <img
+                    src="{{ site.images-path | prepend: site.baseurl | prepend: site.url }}love.svg" width="35"
+                    height="35" alt="love" title="love" /> using <a href="https://jekyllrb.com/"
+                    target="_blank">Jekyll</a>.
+            </div>
+            <div class="col-4 text-right">
+                <a href="#">Back to top ↑</a>
+            </div>
         </div>
-        <div class="col-12 col-md-4 text-center my-2">
-            <span class="mr-2">
-                Find me on
-            </span>
-            {% assign sorted_links = site.collection_social | sort: 'sort_order' %}
-            {% for nav in sorted_links %}
-            
-                <a class="{{ nav.href_class }} mr-2" href="{{ nav.href }}" title="{{ nav.title }}" target="_blank"><img src="{{ nav.icon | prepend: site.images-path | prepend: site.baseurl | prepend: site.url }}" width="35" height="35" alt="Ayush Sharma on {{ nav.title }}" /></a>
-            
-            {% endfor %}
-        </div>
-    </div>
+    </footer>
 </footer>
