@@ -5,8 +5,6 @@ number: 85
 date:   2020-02-10 00:00
 categories: automation containers
 ---
-# Cloning another Bitbucket repo in Bitbucket Pipelines
-
 I recently had a use-case where I wanted to clone another Bitbucket repository during a Pipelines execution. Doing this is very simple, but there is a lot of conflicting information online, so I thought I would document the steps here.
 
 Imagine a very simple Pipeline that looks like this:
@@ -19,7 +17,7 @@ pipelines:
           - git clone git@bitbucket.org:ayushsharma/my-submodules.git
 ```
 
-The repository that triggers the Pipeline will need permission to clone `my-submodules`. Doing so requires adding the public SSH key to `my-submodules`.
+The repository that triggers the Pipeline will need permission to clone `my-submodules`.
 
 ## Create SSH keys for the main repository
 In Bitbucket, go to the repository SSH keys page under `Settings > Pipelines > SSH keys`.
