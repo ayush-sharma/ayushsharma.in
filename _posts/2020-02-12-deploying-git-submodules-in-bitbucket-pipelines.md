@@ -11,7 +11,7 @@ One missing feature in Pipelines is that it is not able to automatically clone s
 
 First, we need to make sure our repository has access to clone the sub-modules repository. You can configure this by reading [Cloning another Bitbucket repository in Bitbucket Pipelines]({% post_url 2020-02-10-cloning-another-bitbucket-repo-in-bitbucket-pipelines %}).
 
-Next, the `git submodule update --init --recursive` can initialize, fetch and checkout any nested submodules. To configure the command in Pipelines, add it to the beginning of the `script` block.
+Next, the `git submodule update --init --recursive` command can initialize, fetch and checkout any nested submodules. Add it to the beginning of the `script` block.
 
 ```yaml
 pipelines:
