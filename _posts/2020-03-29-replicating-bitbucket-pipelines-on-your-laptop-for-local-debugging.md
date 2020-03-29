@@ -84,8 +84,8 @@ With that done, we'll package our Serverless deployment without actually deployi
 This command will create the CloudFormation package for our project and dump the files inside /tmp/myserverlesspackage. Let's go there now and see what we have:
 
 ```bash
-- /mycode # cd /tmp/myserverlesspackage
-- /mycode # ls
+/mycode # cd /tmp/myserverlesspackage
+/mycode # ls
 
 cloudformation-template-update-stack.json
 cloudformation-template-create-stack.json
