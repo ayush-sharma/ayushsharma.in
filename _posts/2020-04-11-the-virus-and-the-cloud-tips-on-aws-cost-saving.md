@@ -5,8 +5,9 @@ number: 88
 date:   2020-04-11 00:00
 categories: aws devops
 ---
-> Unprecedented
-> without previous instance; never before known or experienced; unexampled or unparalleled
+> **Unprecedented**
+> 
+> *without previous instance; never before known or experienced; unexampled or unparalleled*
 
 I am coming to grips with our new situation in different ways. As I figure out how to work indoors for prolonged periods, another challenge has been to see a lot of organisations’ priorities shifting from being cloud-native to remote-native. And as this transition happens, I'm figuring out exactly how to operate a large-scale production environment in the age of asynchronous and minimalist communication.
 
