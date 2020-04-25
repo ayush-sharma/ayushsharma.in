@@ -90,4 +90,4 @@ So:
 3. Understand your fixed costs and your variable costs, and have a plan in place for both.
 4. Optmising cost and reducing cost are two very different things. Identify which one you need early on and plan accordingly.
 5. Each service is priced on different metrics. These will impact your cost and your application architecture.
-6. Find your dragon. Some cost problems are especially thorny. Build the capability for drill-down and alerting on thee costs as early as you can.
+6. Find your dragon. Some cost problems are especially thorny. Build the capability for drill-down and alerting on these costs as early as you can.
